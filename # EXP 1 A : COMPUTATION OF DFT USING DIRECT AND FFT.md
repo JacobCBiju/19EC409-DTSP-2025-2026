@@ -1,16 +1,31 @@
 # EXP 1 A : COMPUTATION OF DFT USING DIRECT AND FFT
 
 # AIM: 
-
-# To Obtain DFT and FFT of a given sequence in SCILAB. 
+ To Obtain DFT and FFT of a given sequence in SCILAB. 
 
 # APPARATUS REQUIRED: 
 PC installed with SCILAB. 
 
 # PROGRAM: 
-// DISCRETE FOURIER TRANSFORM 
+clc;
+clear;
+
+x = [1 4 0 8];
+N = length(x);
+X = fft(x, -1);
+
+subplot(2,1,1);
+plot2d3(0:N-1, x);
+xtitle("Original Sequence x(n)", "n", "Amplitude");
+
+subplot(2,1,2);
+plot2d3(0:N-1, abs(X));
+xtitle("Magnitude Spectrum |X(k)|", "k", "Magnitude");
 
 # OUTPUT: 
 
+![WhatsApp Image 2025-09-02 at 10 18 55_2a165acf](https://github.com/user-attachments/assets/0df56765-6fe4-40a1-8218-9309e49eb6d0)
+
 
 # RESULT: 
+The given discrete sequence was successfully transformed from the time domain to the frequency domain using the Discrete Fourier Transform. The magnitude spectrum clearly shows the distribution of signal energy across different frequency components.
